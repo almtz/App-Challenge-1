@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment2">
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="alm.itesm.appchallenge1.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment2_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="alm.itesm.appchallenge1.AlbumFragment"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album" >
+        <action
+            android:id="@+id/action_albumFragment_to_albumInfoFragment"
+            app:destination="@id/albumInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumInfoFragment"
+        android:name="alm.itesm.appchallenge1.AlbumInfoFragment"
+        android:label="fragment_album_info"
+        tools:layout="@layout/fragment_album_info" >
+        <argument android:name="album"
+            app:argType="alm.itesm.appchallenge1.Albums" />
+    </fragment>
+</navigation>
